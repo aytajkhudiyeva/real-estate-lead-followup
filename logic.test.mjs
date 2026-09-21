@@ -1,0 +1,1 @@
+import{test}from'node:test';import{strict as assert}from'node:assert';import{score,drafts}from'./logic.mjs';test('scores complete matching enquiry',()=>assert.equal(score({budget:2e6,min:1e6,max:3e6,timeline:'now',area:'Marina',type:'apartment',financing:'ready'}).score,100));test('prepares three drafts',()=>assert.equal(drafts({name:'Sara'}).length,3));
